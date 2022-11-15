@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+    <div class="row">
+        
+        <div class="col mt-5">
+            <h2 class="text-primary mt-5"> Resellers List</h2>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Credits</th>
+                            <th scope="col">Cards</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let user of users">
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.credits}}</td>
+                            <td>{{user.password}}</td>
+                            <td>
+                                <button class="btn btn-outline-danger" >Delete</button>
+                            </td>
+                          </tr>
+                                
+                        </tbody>
+                        
+                      </table>
+                      <div class="pagination-buttons" style="float:right;">
+                        <button  class="page-btn" *ngFor="let page of pageNumbers" (click)="changePage(page)" [class.active]="page == selectedPage">{{page}}</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

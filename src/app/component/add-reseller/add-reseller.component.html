@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="row mt-5">
+        <div class="mt-5 d-flex justify-content-center">
+            <div class="card border-0 shadow p-3" style="width: 500px;">
+                <div class="form-floating mb-3 tetx-center">
+                    <h5 class="text-center text-warning">Add Reseller</h5>
+                </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="firstName" name="firstname" [(ngModel)]="name">
+                        <label for="firstname">First name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="lastName" name="lastName" [(ngModel)]="email">
+                        <label for="lastName">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="email" name="email" [(ngModel)]="password">
+                        <label for="email">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="mobile" name="mobile" [(ngModel)]="credits">
+                        <label for="mobile">Credits</label>
+                    </div>
+                    <button type="button" class="btn btn-outline-success" (click)="addReseller()">Add Reseller</button>
+            </div>
+        </div>
+    </div>
+</div>
